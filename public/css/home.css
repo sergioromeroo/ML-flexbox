@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+.body{
+    background-color: var(--color-grisClaro);
+}
+/*HEADER*/
+.header{
+    background-color: var(--color-amarillo);
+    height: 21vh;
+}
+.header .logo-buscador{
+    display: flex;
+    align-items: center;
+}
+.header img{
+    width: 50%;
+}
+.header form{
+    width: 50%;
+}
+.header div .buscador{
+    width: 50%;
+    border: none;
+    height: 35px;
+    padding: 10px;
+    border-radius: 5px 0px 0px 5px; 
+    margin-left: 15px;  
+}
+.header div button{
+    height: 35px;
+    width: 20px;
+    padding: 5px 5px 5px 0px;
+    background-color: white;
+    border-radius: 0px 5px 5px 0px;
+    border: none;
+}
+.header .p1{
+    text-align: center;
+    font-size: 12px;
+}
+.header .logo-buscador .p2{
+    display: none;
+}
+.header ul{
+    display: none;
+}
+.header a{
+    color: #000;
+    text-decoration: none;
+    margin-right: 5px;
+}
+.header div.burger-menu{
+    color: var(--color-grisClaro);
+    background-color: var(--color-celeste);
+    margin-top: 30px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    width: 40px;
+    text-align: center;
+    margin-left: 45%;
+}
+
+/*MAIN*/
+.main {
+    text-align: center;
+}
+.main .banner{
+    height: 255px;
+    width: 100%;
+    object-fit: contain;
+}
+.main .titulares{
+    font-size: 24px;
+    margin: 10px 10px;
+}
+.main .sec-articulos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.main .article{
+    background: #fff;
+    margin: 0 10px 10px;
+    width: 290px;
+}
+.main .article img{
+    border-bottom: 1px solid var(--color-grisClaro);
+    width: 85%;
+}
+.main div.truck{
+    display: inline-block;
+    color: var(--color-verde);
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: right;
+    background-color: white;
+    border-radius:50px;
+    border: 1px solid var(--color-verde);
+    
+}
+.main .article .detalle-compra{
+    text-align: left;
+    padding: 15px;
+    display: flex;
+}
+.main .article .precio{
+    font-size: 18px;
+    margin: 0 10px;
+    width: 30%;
+}
+.main .article .descuento{
+    font-size: 16px;
+    margin: 0 10px;
+    color: var(--color-verde);
+    width: 70%;
+}
+.main .article .descripcion{
+    display: none;
+}
+/*FOOTER*/
+.footer{
+    background-color: rgb(255, 255, 255);
+    margin: 0px 5px;
+
+}
+.footer section{
+    text-align: center;
+}
+.footer section i{
+    color: var(--color-celeste);
+    margin-bottom: 10px;
+    margin-top: 60px;
+    font-size: 2em;
+    line-height: 0px;
+}
+.footer .title{
+    color: var(--color-grisOscuro);
+    font-size: 20px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+.footer .info{
+    color: var(--color-grisOscuro);
+    font-size: 13px;
+    margin: 0px 55px;
+}
+.footer .copyright{
+    text-align: left;
+    padding: 10px 0px;
+    margin-left: 10px;
+    color: var(--color-grisOscuro);
+    font-size: 10px;
+}
+
+@media (min-width: 481px){
+    .p1{
+        display: none;
+    }
+    .header .logo-buscador .p2{
+        display: flex;
+        width: 50%;
+    }
+    .main .article .descripcion{
+        display: block;
+        font-size: 16px;
+        text-align: left;
+        padding: 0 20px 20px;
+        font-weight: normal;
+    }
+    .main .article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    .header nav{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    .header nav .nav li a, .user li a{
+        margin-left: 10px;
+    }
+    .header nav .nav{
+        list-style: none;
+        display: flex;
+        margin: 60px 0 0 30px;
+    }
+    .header nav .user{
+        display: flex;
+        list-style: none;
+        margin-right: 30px;
+    }
+    .header div.burger-menu{
+        display: none;
+    }
+}
+
+@media (min-width: 769px){
+    .main .sec-articulos{
+        flex-wrap: nowrap;
+    }
+    .main .article .descripcion{
+        display: inline-block;
+    }
+    .header ul{
+        display: block;
+    }
+}
